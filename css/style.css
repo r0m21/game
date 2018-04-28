@@ -1,0 +1,21 @@
+/* MARGIN */ 
+
+.mt-10 {margin-top : 10px;}
+.mb-10 {margin-bottom: 10px;}
+.mb-20 {margin-bottom: 20px;}
+
+
+/* IMG */ 
+
+
+
+/* FONT */ 
+.raleway {font-family: 'Raleway', sans-serif;}
+.fw-light {font-weight: 200;}
+.fw-norm {font-weight: 400;}
+.fw-bold {font-weight: 700;}
+.fw-black {font-weight: 900;}
+
+.fs-h2 {font-size: 0.8em;}
+.fs-p {font-size: 0.5em;}
+.text-center {text-align: centeR;}
