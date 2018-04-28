@@ -24,7 +24,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="description.html">Theme</a></li>
-                <li><a href="user.html">Profil</a></li>
+                <li><a href="#.html">Profil</a></li>
             </ul>
             </nav>
         </div>
@@ -34,7 +34,16 @@
 
 <main class="container-fluid ">
 
-    <div id="map"></div>
+       <div id="floating-panel">
+<b>Mode of Travel: </b>
+<select id="mode">
+  <option value="DRIVING">Driving</option>
+  <option value="WALKING">Walking</option>
+  <option value="BICYCLING">Bicycling</option>
+  <option value="TRANSIT">Transit</option>
+</select>
+</div>
+<div id="map"></div>
     
 
     <section class="container-fluid">
@@ -69,18 +78,11 @@
             </div>
         </div>
 
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mb-10">
             <div class="col-2 text-center rounded-border border-3 bg-1 no-pad">
                 <i class="fas fa-camera text-white"></i>      
             </div>   
         </div>
-
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center mt-10 mb-20">
-                <a href="test.html"><button type="button" class="btn btn-outline-success btn-sm">Discover</button></a>
-            </div>
-        </div>
-
 
     </section>
 
@@ -90,22 +92,43 @@
 
 </main>
 
-    <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
+   <script>
+       function initMap() {
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var directionsService = new google.maps.DirectionsService;
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
+          zoom: 14,
+          center: {lat: 37.77, lng: -122.447}
         });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
+        directionsDisplay.setMap(map);
+
+        calculateAndDisplayRoute(directionsService, directionsDisplay);
+        document.getElementById('mode').addEventListener('change', function() {
+          calculateAndDisplayRoute(directionsService, directionsDisplay);
+        });
+      }
+
+      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        var selectedMode = document.getElementById('mode').value;
+        directionsService.route({
+        origin: {lat: 47.322, lng: 5.041},  // Haight.
+        destination: {lat: 47.320, lng: 5.039},  // Ocean Beach.
+          // Note that Javascript allows us to access the constant
+          // using square brackets and a string value as its
+          // "property."
+          travelMode: google.maps.TravelMode[selectedMode]
+        }, function(response, status) {
+          if (status == 'OK') {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
         });
       }
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALIaO0T6zZuuQPjR1SPPSvc7thQnOVZSo&callback=initMap">
-    </script>
+   <script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApk1Z1bW36m-2Xay8E-C93P2fmh8t-W84&callback=initMap">
+</script>
   
 
 </body>
