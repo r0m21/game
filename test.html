@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html>
+  <head>
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -11,19 +11,19 @@
     
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,700,900" rel="stylesheet">
     <title>MY CITY</title>
-</head>
+  </head>
 
-<body>
+  <body>
 
-<header class="container text-center">
+  <header class="container text-center">
     <div class="row">
         <div class="col-12">
             <input class="burger-check" id="burger-check" type="checkbox"><label for="burger-check" class="burger"></label>
             <nav id="navigation1" class="navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="description.html">Theme</a></li>
-                <li><a href="user.html">Profil</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Theme</a></li>
+                <li><a href="#">Profil</a></li>
             </ul>
             </nav>
         </div>
@@ -31,12 +31,12 @@
 </header>
 
 
-<main class="container-fluid ">
+<main class="container-fluid no-pad">
 
     <div id="map"></div>
     
 
-    <section class="container-fluid">
+<section class="container">
         <div class="row">
             <div class="col-12">
             <h2 class="raleway fw-bold fs-h2 mt-10 d-flex justify-content-start border-bottom">GASTRONOMIE</h2>
@@ -56,18 +56,11 @@
 
         <div class="row">
             <div class="col-12 d-flex justify-content-center mt-10 mb-20">
-                <a href="test.html"><button type="button" class="btn btn-outline-success btn-sm">Discover</button></a>
+                <button type="button" class="btn btn-outline-success btn-sm">Discover</button>
             </div>
         </div>
 
-
-    </section>
-
-
-
-
-
-</main>
+    </section>    
 
     <script>
       function initMap() {
@@ -85,10 +78,5 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALIaO0T6zZuuQPjR1SPPSvc7thQnOVZSo&callback=initMap">
     </script>
-  
-
-</body>
-
+  </body>
 </html>
-
-
