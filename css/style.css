@@ -1,9 +1,14 @@
 /* MARGIN */ 
 
+.m-15{margin: 15px;}
+
 .mt-10 {margin-top : 10px;}
 .mb-10 {margin-bottom: 10px;}
 .mb-20 {margin-bottom: 20px;}
 
+.mtb-20{margin: 20px 0;}
+
+.m-auto{margin: auto;}
 
 /* PADDING */ 
 
@@ -20,3 +25,20 @@
 .fs-h2 {font-size: 0.8em;}
 .fs-p {font-size: 0.5em;}
 .text-center {text-align: centeR;}
+
+/* Border / background / color */
+
+.rounded-border{border-radius: 50%;}
+
+.border-1{border: 4px solid rgb(255,0,0);}
+.border-2{border: 4px solid #0a5407;}
+.border-3{border: 4px solid #414141;}
+
+.bg-1{background-color: #414141;}
+
+.color-1{color: #414141;}
+
+@media(min-width: 410px)
+{
+    .rounded-border{width: 85%;}
+}
