@@ -20,11 +20,11 @@
     <div class="row padding-log">
         <div class="col-12 raleway">
             <h1 class="fw-bold border-bottom text-center">MY CITY</h1>
-            <form class="d-flex flex-column justify-content-center align-self-center" action="">
-                <label class="mt-10" for="name">Enter your name</label><input class="border " type="text" placeholder="name">
-                <label class="mt-10" for="mail">Enter your password</label><input class="border" type="text" placeholder="password">
-                <label class="mt-10" for="mail">Enter your mail</label><input class="border" type="text" placeholder="mail">
-                <button type="button" class="btn btn-outline-dark mt-10">REGISTER</button>
+            <form method="post" class="d-flex flex-column justify-content-center align-self-center" action="http://localhost/seriousgame/inscription">
+                <label class="mt-10" for="name">Enter your name</label><input class="border " name="username" type="text" placeholder="name">
+                <label class="mt-10" for="mail">Enter your password</label><input class="border" name="password" type="password" placeholder="password">
+                <label class="mt-10" for="mail">Enter your mail</label><input class="border" name="email" type="email" placeholder="mail">
+                <button type="submit" class="btn btn-outline-dark mt-10">REGISTER</button>
             </form>
         </div>
     </div>
